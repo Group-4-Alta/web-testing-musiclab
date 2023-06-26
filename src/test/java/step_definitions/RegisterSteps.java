@@ -8,6 +8,8 @@ import org.example.RegisterPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
+import java.time.Duration;
+
 public class RegisterSteps {
     private WebDriver webDriver;
 
@@ -17,67 +19,67 @@ public class RegisterSteps {
     }
 
     @Given("User already on musiclab website")
-    public void verifyLandingPage() throws InterruptedException {
+    public void verifyLandingPage(){
         RegisterPage registerPage = new RegisterPage(webDriver);
         Assert.assertTrue(registerPage.verifyLandingWebPage());
-        Thread.sleep(3000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
     @When("User click login menu on musiclab website")
-    public void clickBtnLoginMenu() throws InterruptedException {
+    public void clickBtnLoginMenu(){
         RegisterPage registerPage = new RegisterPage(webDriver);
         registerPage.clickLoginMenu();
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
     @Then("User already in login page")
-    public void verifyLandingLoginPage() throws InterruptedException{
+    public void verifyLandingLoginPage(){
         RegisterPage registerPage = new RegisterPage(webDriver);
         Assert.assertTrue(registerPage.verifyLandingLoginPage());
-        Thread.sleep(3000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
     @And("User click register option on login page")
-    public void clickRegisterOptions() throws InterruptedException{
+    public void clickRegisterOptions(){
         RegisterPage registerPage = new RegisterPage(webDriver);
         registerPage.clickRegisterOption();
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
     @And("User already in register page")
-    public void verifyLandingRegisterPage() throws InterruptedException{
+    public void verifyLandingRegisterPage(){
         RegisterPage registerPage = new RegisterPage(webDriver);
         Assert.assertTrue(registerPage.verifyLandingRegisterPage());
-        Thread.sleep(3000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
     @And("User input \"(.*)\" as namaLengkap, select \"(.*)\" as role, input \"(.*)\" as email and input \"(.*)\" as password")
-    public void registerAccount(String namaLengkap, String selRole, String emailRegist, String password) throws InterruptedException{
+    public void registerAccount(String namaLengkap, String selRole, String emailRegist, String password){
         RegisterPage registerPage = new RegisterPage(webDriver);
         registerPage.setNamaLengkap(namaLengkap);
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         registerPage.setSelectRole(selRole);
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         registerPage.setEmailRegister(emailRegist);
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         registerPage.setPassword(password);
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
     @Then("User will get the pop up message \"(.*)\"")
-    public void verifyPopupMessage(String errorLetters) throws InterruptedException{
+    public void verifyPopupMessage(String errorLetters){
         RegisterPage registerPage = new RegisterPage(webDriver);
         Assert.assertTrue(registerPage.verifyMessageBoxMustShow());
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         Assert.assertEquals(errorLetters, registerPage.verifyMessageBox());
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         registerPage.clickBtnOkPopupMessage();
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
     @And("User click the register button")
-    public void clickRegisterBtn() throws InterruptedException{
+    public void clickRegisterBtn(){
         RegisterPage registerPage = new RegisterPage(webDriver);
         registerPage.clickBtnRegister();
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
     @And("User will see error")
-    public void SeeError() throws InterruptedException{
+    public void SeeError(){
         RegisterPage registerPage = new RegisterPage(webDriver);
         registerPage.clickBtnRegister();
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 }

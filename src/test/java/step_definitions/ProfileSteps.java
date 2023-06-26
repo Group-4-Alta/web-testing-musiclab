@@ -5,6 +5,8 @@ import org.example.ProfilePage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
+import java.time.Duration;
+
 public class ProfileSteps {
     private WebDriver webDriver;
     public ProfileSteps(){
@@ -12,21 +14,21 @@ public class ProfileSteps {
         this.webDriver =Hooks.webDriver;
     }
     @And("User click the profile menu on homepage")
-    public void clickProfileMenuForStudent() throws InterruptedException{
+    public void clickProfileMenuForStudent(){
         ProfilePage profilePage = new ProfilePage(webDriver);
         profilePage.clickProfileMenu();
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
     @And("User already in profile student page")
-    public void verifyLandingProfileStudentPage() throws InterruptedException{
+    public void verifyLandingProfileStudentPage(){
         ProfilePage profilePage = new ProfilePage(webDriver);
         Assert.assertTrue(profilePage.verifyLandingProfileStudentPage());
-        Thread.sleep(3000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
     @And("User already in profile mentor page")
-    public void verifyLandingProfileMentorPage() throws InterruptedException{
+    public void verifyLandingProfileMentorPage(){
         ProfilePage profilePage = new ProfilePage(webDriver);
         Assert.assertTrue(profilePage.verifyLandingProfileMentorPage());
-        Thread.sleep(3000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 }
