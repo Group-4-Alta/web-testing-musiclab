@@ -6,6 +6,8 @@ import org.example.RegisterPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
+import java.time.Duration;
+
 public class LoginSteps {
     private WebDriver webDriver;
 
@@ -18,22 +20,23 @@ public class LoginSteps {
         RegisterPage registerPage = new RegisterPage(webDriver);
         LoginPage loginPage = new LoginPage(webDriver);
         loginPage.setEmailLogin(emailLogin);
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         registerPage.setPassword(password);
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         registerPage.setSelectRole(selRole);
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
     @And("User click the login button")
     public void clickLoginBtn() throws InterruptedException{
         LoginPage loginPage = new LoginPage(webDriver);
         loginPage.clickBtnLogin();
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
     @And("User will direct to homepage")
     public void verifyLandingHomepage() throws InterruptedException{
         LoginPage loginPage = new LoginPage(webDriver);
         Assert.assertTrue(loginPage.verifyLandingHomepage());
-        Thread.sleep(3000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
+
 }

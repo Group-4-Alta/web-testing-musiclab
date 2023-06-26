@@ -1,0 +1,7 @@
+step_definitions\Hooks.class
+step_definitions\LoginSteps.class
+step_definitions\RunCukesTest.class
+step_definitions\UploadEditCourseSteps.class
+step_definitions\ProfileSteps.class
+step_definitions\LihatJadwalFMSteps.class
+step_definitions\RegisterSteps.class
