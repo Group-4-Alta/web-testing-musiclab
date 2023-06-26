@@ -30,7 +30,7 @@ public class LihatJadwalFMSteps {
     }
 
     @And("User click Nagita mentor")
-    public void clickMentoronSearchPage (String mentor) throws InterruptedException {
+    public void clickMentoronSearchPage () throws InterruptedException {
         LihatJadwalFMPage lihatJadwalFMPage = new LihatJadwalFMPage(webDriver);
         lihatJadwalFMPage.clickMentorNagita();
         Thread.sleep(2000);
