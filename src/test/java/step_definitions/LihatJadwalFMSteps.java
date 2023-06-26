@@ -6,6 +6,8 @@ import org.example.LihatJadwalFMPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
+import java.time.Duration;
+
 public class LihatJadwalFMSteps {
 
     private WebDriver webDriver;
@@ -16,37 +18,37 @@ public class LihatJadwalFMSteps {
     }
 
     @And("User click the find mentor on homepage")
-    public void clickFindMentor () throws InterruptedException {
+    public void clickFindMentor () {
         LihatJadwalFMPage lihatJadwalFMPage = new LihatJadwalFMPage(webDriver);
         lihatJadwalFMPage.clickFindmentor();
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
     @And("User will direct to search mentor page")
-    public void verifyLandingSearchMentor () throws InterruptedException {
+    public void verifyLandingSearchMentor () {
         LihatJadwalFMPage lihatJadwalFMPage = new LihatJadwalFMPage(webDriver);
         Assert.assertTrue(lihatJadwalFMPage.verifyLandingSearchMentorPage());
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
     @And("User click Nagita mentor")
-    public void clickMentoronSearchPage () throws InterruptedException {
+    public void clickMentoronSearchPage () {
         LihatJadwalFMPage lihatJadwalFMPage = new LihatJadwalFMPage(webDriver);
         lihatJadwalFMPage.clickMentorNagita();
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
     @Then("User will direct to profile detail mentor page")
-    public void verifyLandingMentorDetailPage () throws InterruptedException {
+    public void verifyLandingMentorDetailPage () {
         LihatJadwalFMPage lihatJadwalFMPage = new LihatJadwalFMPage(webDriver);
         Assert.assertTrue(lihatJadwalFMPage.verifyLandingMentorDetail());
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
     @And("User click the Lihat Jadwal Dropdown")
-    public void clickJadwalMarker () throws InterruptedException {
+    public void clickJadwalMarker () {
         LihatJadwalFMPage lihatJadwalFMPage = new LihatJadwalFMPage(webDriver);
         lihatJadwalFMPage.clickJadwalMarker();
-        Thread.sleep(2000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 }
