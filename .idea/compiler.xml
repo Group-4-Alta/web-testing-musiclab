@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Team4_CapstoneProject_MusicLab" />
+        <module name="web-testing-musiclab" />
       </profile>
     </annotationProcessing>
   </component>
