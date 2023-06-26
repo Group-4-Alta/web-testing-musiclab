@@ -11,7 +11,7 @@ Feature: Check a mentor schedule
     And User will direct to homepage
     And User click the find mentor on homepage
     And User will direct to search mentor page
-    And User click Johannes Hoho Mui mentor
+    And User click Nagita mentor
     Then User will direct to profile detail mentor page
     And User click the Lihat Jadwal Dropdown
 

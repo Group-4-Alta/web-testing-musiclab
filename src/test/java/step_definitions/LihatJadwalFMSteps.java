@@ -29,10 +29,10 @@ public class LihatJadwalFMSteps {
         Thread.sleep(2000);
     }
 
-    @And("User click Johannes Hoho Mui mentor")
+    @And("User click Nagita mentor")
     public void clickMentoronSearchPage (String mentor) throws InterruptedException {
         LihatJadwalFMPage lihatJadwalFMPage = new LihatJadwalFMPage(webDriver);
-        lihatJadwalFMPage.clickMentorJohannes();
+        lihatJadwalFMPage.clickMentorNagita();
         Thread.sleep(2000);
     }
 

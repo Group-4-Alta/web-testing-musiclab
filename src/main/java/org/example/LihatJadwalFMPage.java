@@ -18,8 +18,8 @@ public class LihatJadwalFMPage {
     private WebElement btnfindmentor;
     @FindBy (xpath = "//input[@id='search']")
     private WebElement searchmentor;
-    @FindBy (xpath = "//div[@class='m-5 grid grid-cols-2 gap-3']/div[3]//img[@src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png']")
-    private WebElement johannesmentor;
+    @FindBy (xpath = "//div[@class='m-5 grid grid-cols-2 gap-3']/div[2]//img[@src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png']")
+    private WebElement nagitamentor;
     @FindBy (xpath = "//p[@class='text-5xl font-bold']")
     private WebElement mentortitle;
     @FindBy (xpath = "//summary[.='Lihat Jadwal']")
@@ -33,8 +33,8 @@ public class LihatJadwalFMPage {
         return searchmentor.isDisplayed();
     }
 
-    public void clickMentorJohannes () {
-        johannesmentor.click();
+    public void clickMentorNagita () {
+        nagitamentor.click();
     }
 
     public boolean verifyLandingMentorDetail () {
