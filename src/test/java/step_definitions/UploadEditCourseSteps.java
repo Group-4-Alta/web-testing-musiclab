@@ -19,14 +19,14 @@ public class UploadEditCourseSteps {
 
 
     @And("User click Kursus Saya menu on profile page")
-    public void userClickKursusSayaMenuOnProfilePage() throws InterruptedException {
+    public void userClickKursusSayaMenuOnProfilePage() {
         UploadEditCoursePage uploadEditCoursePage = new UploadEditCoursePage(webDriver);
         uploadEditCoursePage.clickKursusSaya();
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
     @And("User will direct to Course page")
-    public void userWillDirectToCoursePage() throws InterruptedException {
+    public void userWillDirectToCoursePage() {
         UploadEditCoursePage uploadEditCoursePage = new UploadEditCoursePage(webDriver);
         webDriver.navigate().refresh();
         Assert.assertTrue(uploadEditCoursePage.coursePage());
@@ -34,30 +34,36 @@ public class UploadEditCourseSteps {
     }
 
     @And("User click the Upload New Course menu on Course page")
-    public void userClickTheUploadNewCourseMenuOnCoursePage()  throws InterruptedException{
+    public void userClickTheUploadNewCourseMenuOnCoursePage() {
         UploadEditCoursePage uploadEditCoursePage = new UploadEditCoursePage(webDriver);
         uploadEditCoursePage.clickUploadKNewCourse();
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
     @And("User will direct to Upload Kursus page")
-    public void userWillDirectToUploadKursusPage()  throws InterruptedException{
+    public void userWillDirectToUploadKursusPage() {
         UploadEditCoursePage uploadEditCoursePage = new UploadEditCoursePage(webDriver);
         webDriver.navigate().refresh();
         Assert.assertTrue(uploadEditCoursePage.verifyUploadKursusPage());
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
-    @And("User click the Choose File button to edit profile picture")
-    public void userClickTheChooseFileButtonToEditProfilePicture() throws InterruptedException{
+    @And("User click the Choose File button to upload profile picture")
+    public void userClickTheChooseFileButtonToUploadProfilePicture() {
         UploadEditCoursePage uploadEditCoursePage = new UploadEditCoursePage(webDriver);
         uploadEditCoursePage.uploadPhotoProfile();
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+    }
+    @And("User click the Choose File button to edit profile picture")
+    public void userClickTheChooseFileButtonToEditProfilePicture() {
+        UploadEditCoursePage uploadEditCoursePage = new UploadEditCoursePage(webDriver);
+        uploadEditCoursePage.editPhotoProfile();
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
 
     @And("User input \"([^\"]*)\" as Judul Kursus, select \"([^\"]*)\" on Tingkatan Khusus/Level field, \"([^\"]*)\" as Deskripsi Khusus, \"([^\"]*)\" as Apa yang akan dipelajari, \"([^\"]*)\" as Prasyarat Khusus, \"([^\"]*)\" as Untuk siapa khursus ini, \"([^\"]*)\" as Harga khusus, \"([^\"]*)\" as duration")
-    public void userInput(String judul, String level, String deskripsi, String dipelajari, String prasyarat, String untukSiapa, int harga, int duration) throws InterruptedException {
+    public void userInput(String judul, String level, String deskripsi, String dipelajari, String prasyarat, String untukSiapa, int harga, int duration){
         UploadEditCoursePage uploadEditCoursePage = new UploadEditCoursePage(webDriver);
         uploadEditCoursePage.setJudulKhursusField(judul);
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
@@ -78,45 +84,41 @@ public class UploadEditCourseSteps {
     }
 
     @And("User click Upload Kursus button")
-    public void userClickUploadKursusButton() throws InterruptedException{
+    public void userClickUploadKursusButton() {
         UploadEditCoursePage uploadEditCoursePage = new UploadEditCoursePage(webDriver);
         uploadEditCoursePage.clickBtnUploadKursus();
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
     @And("User click Cancel on Upload Kursus Page")
-    public void userClickCancelOnUploadKursusPage() throws InterruptedException{
+    public void userClickCancelOnUploadKursusPage() {
         UploadEditCoursePage uploadEditCoursePage = new UploadEditCoursePage(webDriver);
         uploadEditCoursePage.clickBtnCancel();
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
+
     @And("User click edit button for Piano - Advance Class on course list")
-    public void userClickEditButtonForPianoAdvanceClassOnCourseList()throws InterruptedException {
+    public void userClickEditButtonForPianoAdvanceClassOnCourseList() {
         UploadEditCoursePage uploadEditCoursePage = new UploadEditCoursePage(webDriver);
         uploadEditCoursePage.clickBtnEditCourse();
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
     @And("User edit the \"([^\"]*)\" as Harga Khusus field")
-    public void userEditTheAsHargaKhususField(int harga) throws InterruptedException {
+    public void userEditTheAsHargaKhususField(int harga) {
         UploadEditCoursePage uploadEditCoursePage = new UploadEditCoursePage(webDriver);
         uploadEditCoursePage.setHargaKhususField(harga);
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
     @And("User click Update Kursus button")
-    public void userClickUpdateKursusButton() throws InterruptedException{
+    public void userClickUpdateKursusButton(){
         UploadEditCoursePage uploadEditCoursePage = new UploadEditCoursePage(webDriver);
         uploadEditCoursePage.clickBtnUpdateKursus();
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
 
-    @And("User edit the Harga Khusus field to empty field")
-    public void userEditTheHargaKhususFieldToEmptyField()throws InterruptedException {
-        UploadEditCoursePage uploadEditCoursePage = new UploadEditCoursePage(webDriver);
-        uploadEditCoursePage.setEmptyHargaKhususField();
-        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-    }
+
 }

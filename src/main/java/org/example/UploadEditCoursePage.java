@@ -86,7 +86,11 @@ public class UploadEditCoursePage {
     }
 
     public void uploadPhotoProfile(){
-        btnChooseFile.sendKeys(dir+"/foto/10.png");
+        btnChooseFile.sendKeys(dir+"/DocFoto/biola.jpg");
+    }
+
+    public void editPhotoProfile(){
+        btnChooseFile.sendKeys(dir+"/DocFoto/pianoedit.jpg");
     }
 
     public void setJudulKhursusField(String judul){
