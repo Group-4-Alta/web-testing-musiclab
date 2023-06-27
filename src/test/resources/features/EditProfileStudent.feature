@@ -5,7 +5,7 @@ Feature: Edit Profile Student
     Given User already on musiclab website
     And User click login menu on musiclab website
     Then User already in login page
-    And User input "cobaauto2@gmail.com" as email, input "cobacobanew2" as password and select "Student" as role
+    And User input "kennedy321@gmail.com" as email, input "adminmurid22" as password and select "Student" as role
     And User click the login button
     Then User will get the pop up message "login success"
     And User will direct to homepage
@@ -14,7 +14,7 @@ Feature: Edit Profile Student
     And User click the edit profile button at profile student page
     And User already in edit profile student page
     When User edit photo profile
-    And User input "Robert Junior" as namaLengkap, select "Male" as JenisKelamin, input "081566667777" as phone, input "cobaauto2@gmail.com" as email and input "Casablanca" as alamat
+    And User input "John K" as namaLengkap, select "Male" as JenisKelamin, input "081566667777" as phone, input "kennedy321@gmail.com" as email and input "Beverly Hills" as alamat
     And User click the update button at edit profile student page
     Then User will get the pop up message "success update student profile"
 
@@ -23,7 +23,7 @@ Feature: Edit Profile Student
     Given User already on musiclab website
     And User click login menu on musiclab website
     Then User already in login page
-    And User input "cobaauto2@gmail.com" as email, input "cobacobanew2" as password and select "Student" as role
+    And User input "kennedy321@gmail.com" as email, input "adminmurid22" as password and select "Student" as role
     And User click the login button
     Then User will get the pop up message "login success"
     And User will direct to homepage
@@ -31,7 +31,7 @@ Feature: Edit Profile Student
     And User already in profile student page
     And User click the edit profile button at profile student page
     And User already in edit profile student page
-    When User input "cobacobanew2" as oldPassword, input "cobacobanew22" as newPassword and input "cobacobanew22" as confirmPassword
+    When User input "adminmurid22" as oldPassword, input "adminmurid30" as newPassword and input "adminmurid30" as confirmPassword
     And User click the update password button at edit profile student page
     Then User will get the pop up message "success update student password"
 
@@ -40,7 +40,7 @@ Feature: Edit Profile Student
     Given User already on musiclab website
     And User click login menu on musiclab website
     Then User already in login page
-    And User input "cobaauto2@gmail.com" as email, input "cobacobanew22" as password and select "Student" as role
+    And User input "kennedy321@gmail.com" as email, input "adminmurid30" as password and select "Student" as role
     And User click the login button
     Then User will get the pop up message "login success"
     And User will direct to homepage
@@ -48,7 +48,7 @@ Feature: Edit Profile Student
     And User already in profile student page
     And User click the edit profile button at profile student page
     And User already in edit profile student page
-    When User input "cobacobanew2333" as oldPassword, input "cobacobanew2" as newPassword and input "cobacobanew2" as confirmPassword
+    When User input "cobacoba333" as oldPassword, input "adminmurid22" as newPassword and input "adminmurid22" as confirmPassword
     And User click the update password button at edit profile student page
     Then User will get the pop up message "password not matched"
 
@@ -57,7 +57,7 @@ Feature: Edit Profile Student
     Given User already on musiclab website
     And User click login menu on musiclab website
     Then User already in login page
-    And User input "cobaauto2@gmail.com" as email, input "cobacobanew22" as password and select "Student" as role
+    And User input "kennedy321@gmail.com" as email, input "adminmurid30" as password and select "Student" as role
     And User click the login button
     Then User will get the pop up message "login success"
     And User will direct to homepage
@@ -65,7 +65,7 @@ Feature: Edit Profile Student
     And User already in profile student page
     And User click the edit profile button at profile student page
     And User already in edit profile student page
-    When User input "cobacobanew22" as oldPassword, input "cobacobanew22" as newPassword and input "cobacobanew233" as confirmPassword
+    When User input "adminmurid30" as oldPassword, input "adminmurid23" as newPassword and input "cobacoba233" as confirmPassword
     And User click the update password button at edit profile student page
     Then User will get the pop up message "new password and confirmation password is not equal"
 
@@ -74,7 +74,7 @@ Feature: Edit Profile Student
     Given User already on musiclab website
     And User click login menu on musiclab website
     Then User already in login page
-    And User input "cobaauto2@gmail.com" as email, input "cobacobanew22" as password and select "Student" as role
+    And User input "kennedy321@gmail.com" as email, input "adminmurid30" as password and select "Student" as role
     And User click the login button
     Then User will get the pop up message "login success"
     And User will direct to homepage
@@ -86,17 +86,17 @@ Feature: Edit Profile Student
     And User click the update password button at edit profile student page
     Then User will get the pop up message "old password, new password and confirmation password field cannot be empty"
   Examples:
-    | oldPass      |  | newPass       |  | confirmPass   |
-    |              |  | cobacobanew22 |  | cobacobanew22 |
-    | cobacobanew2 |  |               |  | cobacobanew22 |
-    | cobacobanew2 |  | cobacobanew22 |  |               |
+    | oldPass      |  | newPass   |  | confirmPass |
+    |              |  | cobanew22 |  | cobanew22   |
+    | adminmurid30 |  |           |  | cobanew22   |
+    | adminmurid30 |  | cobanew22 |  |             |
 
   @EditProfileStudentTest6
   Scenario: User go to edit profile student account page and verify function of the kembali button
     Given User already on musiclab website
     And User click login menu on musiclab website
     Then User already in login page
-    And User input "cobaauto2@gmail.com" as email, input "cobacobanew22" as password and select "Student" as role
+    And User input "kennedy321@gmail.com" as email, input "adminmurid30" as password and select "Student" as role
     And User click the login button
     Then User will get the pop up message "login success"
     And User will direct to homepage
