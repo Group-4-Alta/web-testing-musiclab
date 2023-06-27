@@ -44,7 +44,7 @@ public class LihatJadwalFMSteps {
         Assert.assertTrue(lihatJadwalFMPage.verifyLandingMentorDetail());
         webDriver.navigate().refresh();
         Thread.sleep(3000);
-//        TAMBAHAN PERLU THREAD SLEEP
+//        TAMBAHAN PERLU THREAD SLEEP DAN REFRESH
     }
 
     @And("User click the Lihat Jadwal Dropdown")
