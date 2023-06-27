@@ -24,6 +24,9 @@ public class JadwalStudentPage {
     public boolean verifyLandingHistoryBelajarPage(){
         return historiBelajar.isDisplayed();
     }
+    public String verifyBelajarPage(){
+        return historiBelajar.getText();
+    }
     public void clickBtnKembali(){
         kembaliButton.click();
     }

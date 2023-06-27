@@ -3,6 +3,7 @@ package step_definitions;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.example.JadwalStudentPage;
+import org.example.RegisterPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
@@ -21,10 +22,13 @@ public class JadwalStudentSteps {
         jadwalStudentPage.clickBtnJadwalStu();
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
-    @Then("User already in history belajar page")
+    @Then("User already in Histori Belajar page")
     public void verifyLandingHistoryBelajarPage(){
         JadwalStudentPage jadwalStudentPage = new JadwalStudentPage(webDriver);
         Assert.assertTrue(jadwalStudentPage.verifyLandingHistoryBelajarPage());
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        String page = "Histori Belajar";
+        Assert.assertEquals(page, jadwalStudentPage.verifyBelajarPage());
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
     @And("User click the kembali button at history belajar page")
@@ -34,3 +38,5 @@ public class JadwalStudentSteps {
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 }
+
+
