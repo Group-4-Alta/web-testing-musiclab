@@ -31,8 +31,8 @@ public class BuyingCoursePage {
     private WebElement pilihhari;
     @FindBy (xpath = "//button[@class='btn bg-[#3A2BE8] mt-4']")
     private WebElement btnavailability;
-    @FindBy (xpath = "//button[@class='btn bg-[#3A2BE8] mt-4 disabled:border-slate-200 disabled:cursor-not-alloweds']")
-    private WebElement btncontinuepayment;
+//    @FindBy (xpath = "//button[@class='btn bg-[#3A2BE8] mt-4 disabled:border-slate-200 disabled:cursor-not-alloweds']")
+//    private WebElement btncontinuepayment;
     @FindBy (xpath = "//div[@class='merchant-name']")
     private WebElement paymentmethondpage;
     @FindBy (xpath = "//img[@alt='BCA']")
@@ -80,9 +80,9 @@ public class BuyingCoursePage {
         btnavailability.click();
     }
 
-    public void clickcontinuepayment () {
-        btncontinuepayment.click();
-    }
+//    public void clickcontinuepayment () {
+//        btncontinuepayment.click();
+//    }
 
     public boolean verifypaymentmethondpage () {
         return paymentmethondpage.isDisplayed();

@@ -3,10 +3,14 @@ package step_definitions;
 import cucumber.api.java.en.And;
 import org.example.BuyingCoursePage;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.ArrayList;
+
+import static org.openqa.selenium.support.ui.ExpectedConditions.numberOfWindowsToBe;
 
 public class BuyingCourseSteps {
 
@@ -71,15 +75,22 @@ public class BuyingCourseSteps {
     @And("User click the continue payment button")
     public void clickContinuePayment () {
         BuyingCoursePage buyingCoursePage = new BuyingCoursePage(webDriver);
-        buyingCoursePage.clickcontinuepayment();
+        String oriWindow = webDriver.getWindowHandle();
+        assert webDriver.getWindowHandles().size() == 1;
+        webDriver.findElement(By.xpath("//button[@class='btn bg-[#3A2BE8] mt-4 disabled:border-slate-200 disabled:cursor-not-alloweds']")).click();
+        WebDriverWait wait = new WebDriverWait(webDriver, 10);
+        wait.until(numberOfWindowsToBe(2));
+        for (String windowHandle : webDriver.getWindowHandles()) {
+            if(!oriWindow.contentEquals(windowHandle)) {
+                webDriver.switchTo().window(windowHandle);
+                break;
+            }
+        }
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
     @And("User will direct to payment method page in new tab")
     public void verifyPaymentMethodPage () {
-        ArrayList<String> wid = new ArrayList<String>(webDriver.getWindowHandles());
-        webDriver.switchTo().window(wid.get(1));
-        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         BuyingCoursePage buyingCoursePage = new BuyingCoursePage(webDriver);
         Assert.assertTrue(buyingCoursePage.verifypaymentmethondpage());
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
