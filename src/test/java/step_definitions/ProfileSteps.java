@@ -22,12 +22,14 @@ public class ProfileSteps {
     @And("User already in profile student page")
     public void verifyLandingProfileStudentPage(){
         ProfilePage profilePage = new ProfilePage(webDriver);
+        webDriver.navigate().refresh();
         Assert.assertTrue(profilePage.verifyLandingProfileStudentPage());
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
     @And("User already in profile mentor page")
     public void verifyLandingProfileMentorPage(){
         ProfilePage profilePage = new ProfilePage(webDriver);
+        webDriver.navigate().refresh();
         Assert.assertTrue(profilePage.verifyLandingProfileMentorPage());
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
