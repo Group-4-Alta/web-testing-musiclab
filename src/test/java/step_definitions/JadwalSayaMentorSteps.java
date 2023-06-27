@@ -2,9 +2,7 @@ package step_definitions;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import org.example.EditProfileStudentPage;
 import org.example.JadwalSayaMentorPage;
-import org.example.JadwalStudentPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 

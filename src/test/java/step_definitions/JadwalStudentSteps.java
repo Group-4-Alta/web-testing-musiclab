@@ -3,7 +3,6 @@ package step_definitions;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.example.JadwalStudentPage;
-import org.example.RegisterPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
