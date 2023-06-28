@@ -15,7 +15,7 @@ public class BuyingCoursePage {
         this.driver = driver;
     }
 
-    @FindBy (xpath = "//img[@src='https://bucket-musiclab.s3.ap-northeast-1.amazonaws.com/MA523GBX1v4zhDfnB6sCp.png']")
+    @FindBy (xpath = "//div[5]/div[@class='flex-1']")
     private WebElement bujicobamentor;
     @FindBy (xpath = "//img[@alt='Album']")
     private WebElement pianocoursebuji;
