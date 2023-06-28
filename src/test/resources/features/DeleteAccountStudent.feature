@@ -5,7 +5,7 @@ Feature: User do delete account
     Given User already on musiclab website
     And User click login menu on musiclab website
     Then User already in login page
-    When User input "dummy8@gmail.com" as email, input "passdummy8" as password and select "Student" as role
+    When User input "barbie123@gmail.com" as email, input "adminmurid88" as password and select "Student" as role
     And User click the login button
     Then User will get the pop up message "login success"
     And User will direct to homepage
