@@ -28,11 +28,12 @@ public class EditProfileMentorSteps {
     @And("User already in edit profile mentor page")
     public void verifyLandingEditMentorPage () {
         EditProfileMentorPage editProfileMentorPage = new EditProfileMentorPage(webDriver);
+        webDriver.navigate().refresh();
         Assert.assertTrue(editProfileMentorPage.verifyEditProfileMentorPage());
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
-    @And("User input \"(.*)\" as namaLengkap, input \"(.*)\" as deskripsi select \"(.*)\" as jenisKelamin, \"(.*)\" as noHp, input \"(.*)\" as email, input \"(.*)\" as instagram account link, and input \"(.*)\" as alamat")
+    @And("User will input \"(.*)\" as namaLengkap, input \"(.*)\" as deskripsi select \"(.*)\" as jenisKelamin, \"(.*)\" as noHp, input \"(.*)\" as email, input \"(.*)\" as instagram account link, and input \"(.*)\" as alamat")
     public void editProfileMentor (String nama, String deskripsi, String jeniskelamin, String nohp, String email, String instagram, String alamat) {
         EditProfileMentorPage editProfileMentorPage = new EditProfileMentorPage(webDriver);
         editProfileMentorPage.setFieldNama(nama);
@@ -79,14 +80,14 @@ public class EditProfileMentorSteps {
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
-    @And("User input \"(.*)\" as email")
+    @And("User type \"(.*)\" as email")
     public void inputEmailInvalid (String emailInv) {
         EditProfileMentorPage editProfileMentorPage = new EditProfileMentorPage(webDriver);
         editProfileMentorPage.setFieldEmail(emailInv);
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
-    @And("User edit profile picture")
+    @And("User upload profile picture")
     public void editProfilePicture () {
         EditProfileMentorPage editProfileMentorPage = new EditProfileMentorPage(webDriver);
         editProfileMentorPage.uploadPPMentor();
@@ -114,6 +115,7 @@ public class EditProfileMentorSteps {
     @Then("User click the upload sertifikat button at edit profile mentor page")
     public void clickUploadSertifikat () {
         EditProfileMentorPage editProfileMentorPage = new EditProfileMentorPage(webDriver);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         editProfileMentorPage.clickBtnUploadSertifikat();
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
@@ -166,6 +168,13 @@ public class EditProfileMentorSteps {
     public void clickUpdatePass () {
         EditProfileMentorPage editProfileMentorPage = new EditProfileMentorPage(webDriver);
         editProfileMentorPage.clickUpdatePass();
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+    }
+
+    @And("User click the kembali button at edit profile mentor page")
+    public void clickBtnKembali () {
+        EditProfileMentorPage editProfileMentorPage = new EditProfileMentorPage(webDriver);
+        editProfileMentorPage.clickBtnKembali();
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 }

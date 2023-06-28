@@ -61,7 +61,9 @@ public class EditProfileMentorPage {
     private WebElement inputConfirmPass;
     @FindBy (xpath = "//button[.='Update Password']")
     private WebElement btnUpdatePass;
-    public String dir = System.getProperty("user.dir");
+    @FindBy (xpath = "//button[@id='btn-back']")
+    private WebElement btnKembali;
+    public static String dir = System.getProperty("user.dir");
 
     public void clickBtnEditProfileMentor () {
         btnEditProfileMentor.click();
@@ -146,7 +148,7 @@ public class EditProfileMentorPage {
     }
 
     public void clickBtnUploadSertifikat () {
-        btnUploadSertifikat.clear();
+        btnUploadSertifikat.click();
     }
 
     public void setSelectInstrument (String instrument) {
@@ -175,5 +177,9 @@ public class EditProfileMentorPage {
 
     public void clickUpdatePass () {
         btnUpdatePass.click();
+    }
+
+    public void clickBtnKembali () {
+        btnKembali.click();
     }
 }

@@ -13,7 +13,7 @@ Feature: Edit Profile Mentor
     And User already in profile mentor page
     And User click the edit profile button at profile mentor page
     And User already in edit profile mentor page
-    And User input "Buji Coba Aja" as namaLengkap, input "Guru Harpa" as deskripsi select "Male" as jenisKelamin, "085151595900" as noHp, input "buji.coba@yahoo.com" as email, input "instagram.com/buba2320/" as instagram account link, and input "Jalan Buah" as alamat
+    And User will input "Buji Coba Aja" as namaLengkap, input "Guru Harpa" as deskripsi select "Male" as jenisKelamin, "085151595900" as noHp, input "buji.coba@yahoo.com" as email, input "instagram.com/buba2320/" as instagram account link, and input "Jalan Buah" as alamat
     Then User click the update button at edit profile mentor page
     And User will get the pop up message "success update mentor profile"
     And User will direct back to profile mentor page
@@ -67,7 +67,7 @@ Feature: Edit Profile Mentor
     And User already in profile mentor page
     And User click the edit profile button at profile mentor page
     And User already in edit profile mentor page
-    And User input "buji.cobahaha" as email
+    And User type "buji.cobahaha" as email
     Then User click the update button at edit profile mentor page
     And User will get the pop up message "Please Fill The Form with Correct Format"
     And User will stay on edit profile mentor page
@@ -85,7 +85,7 @@ Feature: Edit Profile Mentor
     And User already in profile mentor page
     And User click the edit profile button at profile mentor page
     And User already in edit profile mentor page
-    And User edit profile picture
+    And User upload profile picture
     Then User click the update button at edit profile mentor page
     And User will get the pop up message "success update mentor profile"
     And User will direct back to profile mentor page
@@ -158,7 +158,7 @@ Feature: Edit Profile Mentor
     And User click the edit profile button at profile mentor page
     And User already in edit profile mentor page
     Then User click the upload sertifikat button at edit profile mentor page
-    And User will get the pop up message "validate: Key: 'CredentialCore.Name' Error:Field validation for 'Name' failed on the 'required' tag"
+    And User will get the pop up message "error bind data"
     And User will stay on edit profile mentor page
 
   @EditProfileMentorTest10
@@ -246,7 +246,7 @@ Feature: Edit Profile Mentor
     And User already in edit profile mentor page
     And User input "dicoba123" as oldPassword, input "dicoba321" as newPassword and input "dicoba321" as confirmationPassword
     Then User click the update password button at edit profile mentor page
-    And User will get the pop up message "Password Succesfully Updated"
+    And User will get the pop up message "success update mentor password"
     And User will direct back to profile mentor page
 
   @EditProfileMentorTest15
@@ -300,7 +300,7 @@ Feature: Edit Profile Mentor
     And User already in edit profile mentor page
     And User input "<oldpass>" as oldPassword, input "<newpass>" as newPassword and input "<confirmpass>" as confirmationPassword
     Then User click the update password button at edit profile mentor page
-    And User will get the pop up message "Old Password, New Password and Confirmation Password Field Cannot Be Empty"
+    And User will get the pop up message "old password, new password and confirmation password field cannot be empty"
     And User will stay on edit profile mentor page
   Examples:
     | oldpass   | newpass   | confirmpass |
@@ -321,5 +321,5 @@ Feature: Edit Profile Mentor
     And User already in profile mentor page
     And User click the edit profile button at profile mentor page
     And User already in edit profile mentor page
-    And User click the kembali button at edit profile student page
-    Then User will direct back to profile student page
+    And User click the kembali button at edit profile mentor page
+    Then User will direct back to profile mentor page
