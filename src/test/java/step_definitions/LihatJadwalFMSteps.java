@@ -39,8 +39,9 @@ public class LihatJadwalFMSteps {
     }
 
     @Then("User will direct to profile detail mentor page")
-    public void verifyLandingMentorDetailPage () {
+    public void verifyLandingMentorDetailPage () throws InterruptedException {
         LihatJadwalFMPage lihatJadwalFMPage = new LihatJadwalFMPage(webDriver);
+        Thread.sleep(3000);
         Assert.assertTrue(lihatJadwalFMPage.verifyLandingMentorDetail());
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
