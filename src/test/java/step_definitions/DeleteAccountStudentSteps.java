@@ -29,9 +29,9 @@ public class DeleteAccountStudentSteps {
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
     @Then("User will direct back to login page")
-    public void directBackToLoginPage() throws InterruptedException{
+    public void directBackToLoginPage(){
         DeleteAccountStudentPage deleteAccountStudentPage = new DeleteAccountStudentPage(webDriver);
         Assert.assertTrue(deleteAccountStudentPage.BackToLoginPage());
-        Thread.sleep(3000);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 }
