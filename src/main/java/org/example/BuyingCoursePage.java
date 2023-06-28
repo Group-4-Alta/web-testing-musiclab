@@ -45,6 +45,8 @@ public class BuyingCoursePage {
     private WebElement btnbackmerchant;
     @FindBy (xpath = "//div[@class='text-headline medium']")
     private WebElement transactionprocessed;
+    @FindBy (xpath = "//h2[@class='swal2-title']")
+    private WebElement popuptitle;
 
     public void clickMentorBuji () {
         bujicobamentor.click();
@@ -113,5 +115,9 @@ public class BuyingCoursePage {
         if (driver.getPageSource().contains("Beli Kursus")) {
             return true;
         } else return false;
+    }
+
+    public String verifyMessageBoxTitle(){
+        return popuptitle.getText();
     }
 }

@@ -2,6 +2,7 @@ package step_definitions;
 
 import cucumber.api.java.en.And;
 import org.example.BuyingCoursePage;
+import org.example.RegisterPage;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -137,6 +138,18 @@ public class BuyingCourseSteps {
     public void verifyBtnBeliKursus () {
         BuyingCoursePage buyingCoursePage = new BuyingCoursePage(webDriver);
         Assert.assertFalse(buyingCoursePage.verifyBtnBeliKursus());
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+    }
+
+    @And("User will get the pop up message title \"(.*)\"")
+    public void verifyPopupTitle (String errorTitle) {
+        RegisterPage registerPage = new RegisterPage(webDriver);
+        BuyingCoursePage buyingCoursePage = new BuyingCoursePage(webDriver);
+        Assert.assertTrue(registerPage.verifyMessageBoxMustShow());
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        Assert.assertEquals(errorTitle, buyingCoursePage.verifyMessageBoxTitle());
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        registerPage.clickBtnOkPopupMessage();
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 }
