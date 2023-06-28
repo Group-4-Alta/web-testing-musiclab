@@ -42,25 +42,18 @@ public class BeriUlasanPage {
     public void inputCommentField (String comment) {
         commentField.sendKeys(comment);
     }
-
-    public void clickRating1 () {
-        btnRating1.click();
-    }
-
-    public void clickRating2 () {
-        btnRating2.click();
-    }
-
-    public void clickRating3 () {
-        btnRating3.click();
-    }
-
-    public void clickRating4 () {
-        btnRating4.click();
-    }
-
-    public void clickRating5 () {
-        btnRating5.click();
+    public void clickRatings (String rating) {
+        if (rating == "1") {
+            btnRating1.click();
+        } else if (rating == "2") {
+            btnRating2.click();
+        } else if (rating == "3") {
+            btnRating3.click();
+        } else if (rating == "4") {
+            btnRating4.click();
+        } else if (rating == "5") {
+            btnRating5.click();
+        }
     }
 
     public void clickSubmitUlasan () {

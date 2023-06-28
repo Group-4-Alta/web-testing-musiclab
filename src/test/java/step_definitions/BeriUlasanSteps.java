@@ -33,19 +33,11 @@ public class BeriUlasanSteps {
     }
 
     @And("User input \"(.*)\" as comment and click \"(.*)\" star on rating")
-    public void givingFeedback (String comment, int rating) {
+    public void givingFeedback (String comments, String rating) {
         BeriUlasanPage beriUlasanPage = new BeriUlasanPage(webDriver);
-        beriUlasanPage.inputCommentField(comment);
+        beriUlasanPage.inputCommentField(comments);
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-        if (rating == 1) {
-            beriUlasanPage.clickRating1();
-        } if (rating == 2) {
-            beriUlasanPage.clickRating2();
-        } if (rating == 3) {
-            beriUlasanPage.clickRating3();
-        } if (rating == 4) {
-            beriUlasanPage.clickRating4();
-        } else beriUlasanPage.clickRating5();
+        beriUlasanPage.clickRatings(rating);
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
@@ -77,13 +69,6 @@ public class BeriUlasanSteps {
     public void verifyStayUlasanPage () {
         BeriUlasanPage beriUlasanPage = new BeriUlasanPage(webDriver);
         Assert.assertTrue(beriUlasanPage.verifyUlasanPage());
-        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-    }
-
-    @And("User input \"(.*)\" as comment")
-    public void inputBlankComment (String comment) {
-        BeriUlasanPage beriUlasanPage = new BeriUlasanPage(webDriver);
-        beriUlasanPage.inputCommentField(comment);
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 }

@@ -56,7 +56,6 @@ Feature: Giving feedback with beri ulasan feature
     And User already in Histori Belajar page
     And User click the beri ulasan button
     And User will direct to ulasan page
-    And User input "" as comment
     And User click the submit ulasan button
     And User will get the pop up message "[object Object]"
     And User will stay on ulasan page
