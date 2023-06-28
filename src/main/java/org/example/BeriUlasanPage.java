@@ -19,7 +19,7 @@ public class BeriUlasanPage {
     @FindBy (xpath = "//button[@id='btn-submitulasan']")
     private WebElement btnSubmitUlasan;
     @FindBy (xpath = "//textarea[@id='input-deskripsi']")
-    private WebElement inputDeskripsi;
+    private WebElement commentField;
     @FindBy (xpath = "//button[1]/span[@class='star text-6xl']")
     private WebElement btnRating1;
     @FindBy (xpath = "//button[2]/span[@class='star text-6xl']")
@@ -39,15 +39,35 @@ public class BeriUlasanPage {
         return btnSubmitUlasan.isDisplayed();
     }
 
-    public int clickRating (int rating) {
-        if (rating == 1) {
-            return btnRating1.click();
-        } if (rating == 2) {
-            return btnRating2.click();
-        } if (rating == 3) {
-            return btnRating3.click();
-        } if (rating == 4) {
-            return btnRating4.click();
-        } else return btnRating5.click();
+    public void inputCommentField (String comment) {
+        commentField.sendKeys(comment);
+    }
+
+    public void clickRating1 () {
+        btnRating1.click();
+    }
+
+    public void clickRating2 () {
+        btnRating2.click();
+    }
+
+    public void clickRating3 () {
+        btnRating3.click();
+    }
+
+    public void clickRating4 () {
+        btnRating4.click();
+    }
+
+    public void clickRating5 () {
+        btnRating5.click();
+    }
+
+    public void clickSubmitUlasan () {
+        btnSubmitUlasan.click();
+    }
+
+    public boolean verifyBtnBeriUlasan () {
+        return btnBeriUlasan.isEnabled();
     }
 }
