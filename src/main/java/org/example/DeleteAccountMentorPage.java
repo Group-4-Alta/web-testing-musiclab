@@ -16,23 +16,8 @@ public class DeleteAccountMentorPage {
     @FindBy(xpath = "//button[@id='btn-deactivateaccount']")
     private WebElement btnDeactiveMentor;
 
-//    @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled swal2-default-outline']")
-//    private WebElement btnYaHapusAkun;
-//
-//    @FindBy(xpath = "//button[@class='swal2-cancel swal2-styled swal2-default-outline']")
-//    private WebElement btnBatal;
-
-
     public void clickBtnDeactiveMentor(){
         btnDeactiveMentor.click();
     }
-
-//    public void clickBtnYaHapusAkun(){
-//        btnYaHapusAkun.click();
-//    }
-//    public void clickBtnBatal(){
-//        btnBatal.click();
-//    }
-
 
 }

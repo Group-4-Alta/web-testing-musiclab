@@ -24,19 +24,5 @@ public class DeleteAccountMentorSteps {
             deleteAccountMentorPage.clickBtnDeactiveMentor();
             webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         }
-//
-//    @And("User click the Ya hapus akun button")
-//    public void userClickTheYaHapusAkunButton() {
-//        DeleteAccountMentorPage deleteAccountMentorPage = new DeleteAccountMentorPage(webDriver);
-//        deleteAccountMentorPage.clickBtnYaHapusAkun();
-//        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-//    }
-//
-//    @Then("User will direct back to login page")
-//    public void userWillDirectBackToLoginPage() {
-//        DeleteAccountMentorPage deleteAccountMentorPage = new DeleteAccountMentorPage(webDriver);
-//        deleteAccountMentorPage.verifyBackToLoginPage();
-//        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-//    }
 }
 
