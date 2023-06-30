@@ -15,7 +15,7 @@ Feature: Jadwal Saya Mentor
     Then User already in Histori Mengajar page
 
   @JadwalSayaMentorTest2
-  Scenario: User do check jadwal saya on profile mentor page
+  Scenario: User do check jadwal saya on profile mentor page and verify function of the kembali button
     Given User already on musiclab website
     And User click login menu on musiclab website
     Then User already in login page
