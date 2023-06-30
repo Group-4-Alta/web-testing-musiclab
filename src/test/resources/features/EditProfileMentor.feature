@@ -51,7 +51,7 @@ Feature: Edit Profile Mentor
     And User already in edit profile mentor page
     And User clear all data
     Then User click the update button at edit profile mentor page
-    And User will get the pop up message "Please Fill The Form with Correct Format"
+    And User will get the pop up message title "Please Fill The Form with Correct Format"
     And User will stay on edit profile mentor page
 
   @EditProfileMentorTest4
@@ -69,7 +69,7 @@ Feature: Edit Profile Mentor
     And User already in edit profile mentor page
     And User type "buji.cobahaha" as email
     Then User click the update button at edit profile mentor page
-    And User will get the pop up message "Please Fill The Form with Correct Format"
+    And User will get the pop up message title "Please Fill The Form with Correct Format"
     And User will stay on edit profile mentor page
 
   @EditProfileMentorTest5
@@ -105,7 +105,7 @@ Feature: Edit Profile Mentor
     And User already in edit profile mentor page
     And User edit profile picture with invalid format
     Then User click the update button at edit profile mentor page
-    And User will get the pop up message "Please Fill The Form with Correct Format"
+    And User will get the pop up message title "Please Fill The Form with Correct Format"
     And User will stay on edit profile mentor page
 
   @EditProfileMentorTest7
@@ -141,7 +141,7 @@ Feature: Edit Profile Mentor
     And User already in edit profile mentor page
     And User don't select Tipe Sertifikat, input "%%%" as nama sertifikat, choose a file over 500kb
     Then User click the upload sertifikat button at edit profile mentor page
-    And User will get the pop up message "error upload to s3"
+    And User will get the pop up message title "Please Fill The Form with Correct Format"
     And User will stay on edit profile mentor page
 
   @EditProfileMentorTest9
@@ -228,7 +228,7 @@ Feature: Edit Profile Mentor
     And User click the edit profile button at profile mentor page
     And User already in edit profile mentor page
     Then User click the update genres button at edit profile mentor page
-    And User will get the pop up message "Failed"
+    And User will get the pop up message title "Failed"
     And User will stay on edit profile mentor page
 
   @EditProfileMentorTest14
