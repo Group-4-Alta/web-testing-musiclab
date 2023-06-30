@@ -17,7 +17,7 @@ Feature: Giving feedback with beri ulasan feature
     And User will direct to ulasan page
     And User input "Nice" as comment and click "5" star on rating
     And User click the submit ulasan button
-    And User will get the pop up message "[object Object]"
+    And User will get the pop up message title "Success Give Rating"
     Then User will direct back to history belajar page
     And beri ulasan button should be disabled
 
@@ -38,7 +38,7 @@ Feature: Giving feedback with beri ulasan feature
     And User will direct to ulasan page
     And User input "" as comment and click "5" star on rating
     And User click the submit ulasan button
-    And User will get the pop up message "[object Object]"
+    And User will get the pop up message title "Please Fill All The Form"
     And User will stay on ulasan page
 
   @BeriUlasanTest3
@@ -57,5 +57,5 @@ Feature: Giving feedback with beri ulasan feature
     And User click the beri ulasan button
     And User will direct to ulasan page
     And User click the submit ulasan button
-    And User will get the pop up message "[object Object]"
+    And User will get the pop up message title "Please Fill All The Form"
     And User will stay on ulasan page
