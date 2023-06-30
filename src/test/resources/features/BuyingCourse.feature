@@ -17,9 +17,9 @@ Feature: Buying a course in musiclab
     And User will direct to detail course page
     And User click the Beli Kursus button
     And User will direct to payment page
-    And User input "16122023" and select "Monday" on check availability section
+    And User input "16122023" and select "Sunday" on check availability section
     And User click the check availability button
-    And User will get the pop up message "[object Object]"
+    And User will get the pop up message title "Schedules Available"
     And User click the continue payment button
     And User will direct to payment method page in new tab
     And User will select BCA Virtual Account as payment method
@@ -68,7 +68,7 @@ Feature: Buying a course in musiclab
     And User will direct to payment page
     And User input "07095766" and select "Monday" on check availability section
     And User click the check availability button
-    And User will get the pop up message "Schedules Unavailable"
+    And User will get the pop up message "schedule not available"
     And User will stay on payment page
 
   @BuyingTest4
