@@ -12,11 +12,11 @@ public class DetailCourseMentorPage {
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }
-    @FindBy(xpath = "//img[@src='https://bucket-musiclab.s3.ap-northeast-1.amazonaws.com/GhA4B1fnXD6CsvM3p2Bz5.jpg']")
+    @FindBy(xpath = "//img[@src='https://bucket-musiclab.s3.ap-northeast-1.amazonaws.com/fCDnpsX12B4z5Mh6vA3GB.jpg']")
     private WebElement courseMentor1;
     @FindBy(xpath = "//h1[@class='text-black text-2xl font-bold font-poppins']")
     private WebElement deskripsiKhusus;
-    @FindBy(xpath = "//img[@src='https://bucket-musiclab.s3.ap-northeast-1.amazonaws.com/GhA4B1fnXD6CsvM3p2Bz5.jpg']")
+    @FindBy(xpath = "//img[@src='https://bucket-musiclab.s3.ap-northeast-1.amazonaws.com/fCDnpsX12B4z5Mh6vA3GB.jpg']")
     private WebElement courseMentor2;
     public void clickCourseMentor1(){
         courseMentor1.click();

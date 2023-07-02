@@ -20,12 +20,11 @@ public class EditProfileStudentSteps {
     @And("User click the edit profile button at profile student page")
     public void clickEditProfileStudent() {
         EditProfileStudentPage editProfileStudentPage = new EditProfileStudentPage(webDriver);
-        webDriver.navigate().refresh();
         editProfileStudentPage.clickEditProfileStu();
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
     }
     @And("User already in edit profile student page")
-    public void verifyLandingEditProfileStuPage() {
+    public void verifyLandingEditProfileStuPage(){
         EditProfileStudentPage editProfileStudentPage = new EditProfileStudentPage(webDriver);
         Assert.assertTrue(editProfileStudentPage.verifyLandingEditProfileStuPage());
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
@@ -36,16 +35,16 @@ public class EditProfileStudentSteps {
         editProfileStudentPage.editPhotoProfileStu();
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
     }
-    @And("User input \"(.*)\" as namaLengkap, select \"(.*)\" as JenisKelamin, input \"(.*)\" as phone, input \"(.*)\" as email and input \"(.*)\" as alamat")
-    public void editProfileStudent(String nameStudent, String jenisKelamin, String phone, String emailStudent, String address){
+    @And("User input \"([^\"]*)\" as nameStudent, select \"([^\"]*)\" as gender, input \"([^\"]*)\" as phone, input \"([^\"]*)\" as emailStudent and input \"([^\"]*)\" as address student")
+    public void userEditProfileStudent(String nameStu, String jenisK, String noHp, String emailStu, String address){
         EditProfileStudentPage editProfileStudentPage = new EditProfileStudentPage(webDriver);
-        editProfileStudentPage.setNameUpdate(nameStudent);
+        editProfileStudentPage.setNameUpdate(nameStu);
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
-        editProfileStudentPage.setSelectJenisKelamin(jenisKelamin);
+        editProfileStudentPage.setSelectJenisKelamin(jenisK);
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
-        editProfileStudentPage.setPhoneUpdate(phone);
+        editProfileStudentPage.setPhoneUpdate(noHp);
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
-        editProfileStudentPage.setEmailUpdate(emailStudent);
+        editProfileStudentPage.setEmailUpdate(emailStu);
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
         editProfileStudentPage.setAddressUpdate(address);
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
