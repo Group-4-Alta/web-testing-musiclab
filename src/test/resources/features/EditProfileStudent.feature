@@ -14,7 +14,7 @@ Feature: Edit Profile Student
     And User click the edit profile button at profile student page
     And User already in edit profile student page
     When User edit photo profile
-    And User input "John K" as namaLengkap, select "Male" as JenisKelamin, input "081566667777" as phone, input "kennedy321@gmail.com" as email and input "Beverly Hills" as alamat
+    And User input "John K" as nameStudent, select "Male" as gender, input "081299996666" as phone, input "kennedy321@gmail.com" as emailStudent and input "Beverly Hills" as address student
     And User click the update button at edit profile student page
     Then User will get the pop up message "success update student profile"
 

@@ -49,16 +49,20 @@ public class RegisterSteps {
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
     @And("User input \"(.*)\" as namaLengkap, select \"(.*)\" as role, input \"(.*)\" as email and input \"(.*)\" as password")
-    public void registerAccount(String namaLengkap, String selRole, String emailRegist, String password){
+    public void registerAccount(String namaLengkap, String selRole, String emailRegist, String password) throws InterruptedException{
         RegisterPage registerPage = new RegisterPage(webDriver);
         registerPage.setNamaLengkap(namaLengkap);
-        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        Thread.sleep(3000);
+//        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         registerPage.setSelectRole(selRole);
-        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        Thread.sleep(3000);
+//        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         registerPage.setEmailRegister(emailRegist);
-        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        Thread.sleep(3000);
+//        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         registerPage.setPassword(password);
-        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        Thread.sleep(3000);
+//        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
     @Then("User will get the pop up message \"(.*)\"")
     public void verifyPopupMessage(String errorLetters){
@@ -77,9 +81,9 @@ public class RegisterSteps {
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
     @And("User will see error")
-    public void SeeError(){
+    public void SeeError() throws InterruptedException{
         RegisterPage registerPage = new RegisterPage(webDriver);
         registerPage.clickBtnRegister();
-        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        Thread.sleep(3000);
     }
 }
