@@ -3,7 +3,7 @@ MusicLab is a platform for people who want to study music and music tutors.
 On this platform, application users can buy the tutoring package they want to study and the schedule can be adjusted according to the needs and schedule provided by the tutor.
 
 # WEB Testing - MusicLab
-This is API Automation Testing Project for [MusicLab](https://music-lab-immersive.netlify.app/). This project was created to complete a Capstone project in the Batch 10 Quality Assurance class at the Alterra Academy Immersive Program. At this project, we perform an WEB Automation Testing for 17 resources or end points (Register, Login, Logout, Edit Profile Student, Jadwal Student, Buying Course, Beri Ulasan, Chat, Lihat Jadwal from Find Mentor, Edit Profile Mentor, Check Jadwal Saya Mentor, Upload & Edit Course, Delete Mentor Course, Tambah & Lihat Jadwal Mentor, Detail Course for Mentor, Delete Account Student, Delete Account Mentor).
+This is WEB Automation Testing Project for [MusicLab](https://music-lab-immersive.netlify.app/). This project was created to complete a Capstone project in the Batch 10 Quality Assurance class at the Alterra Academy Immersive Program. At this project, we perform an WEB Automation Testing for 17 resources or end points (Register, Login, Logout, Edit Profile Student, Jadwal Student, Buying Course, Beri Ulasan, Chat, Lihat Jadwal from Find Mentor, Edit Profile Mentor, Check Jadwal Saya Mentor, Upload & Edit Course, Delete Mentor Course, Tambah & Lihat Jadwal Mentor, Detail Course for Mentor, Delete Account Student, Delete Account Mentor).
 
 # Testing Documentation
 [Spreadsheet](https://docs.google.com/spreadsheets/d/1IdcKSn8_2um7ZuhkJ8l18yMDvfx3RXOzEwqw4iaPPgk/edit#gid=1283485061)
