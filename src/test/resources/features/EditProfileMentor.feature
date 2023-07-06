@@ -254,7 +254,7 @@ Feature: Edit Profile Mentor
     Given User already on musiclab website
     When User click login menu on musiclab website
     Then User already in login page
-    And User input "buji.coba@yahoo.com" as email, input "dicoba123" as password and select "Mentor" as role
+    And User input "buji.coba@yahoo.com" as email, input "dicoba321" as password and select "Mentor" as role
     And User click the login button
     Then User will get the pop up message "login success"
     And User will direct to homepage
@@ -262,7 +262,7 @@ Feature: Edit Profile Mentor
     And User already in profile mentor page
     And User click the edit profile button at profile mentor page
     And User already in edit profile mentor page
-    And User input "dicobaaja" as oldPassword, input "dicoba321" as newPassword and input "dicoba321" as confirmationPassword
+    And User input "dicobaaja" as oldPassword, input "dicoba123" as newPassword and input "dicoba123" as confirmationPassword
     Then User click the update password button at edit profile mentor page
     And User will get the pop up message "password not matched"
     And User will stay on edit profile mentor page
@@ -272,7 +272,7 @@ Feature: Edit Profile Mentor
     Given User already on musiclab website
     When User click login menu on musiclab website
     Then User already in login page
-    And User input "buji.coba@yahoo.com" as email, input "dicoba123" as password and select "Mentor" as role
+    And User input "buji.coba@yahoo.com" as email, input "dicoba321" as password and select "Mentor" as role
     And User click the login button
     Then User will get the pop up message "login success"
     And User will direct to homepage
@@ -280,7 +280,7 @@ Feature: Edit Profile Mentor
     And User already in profile mentor page
     And User click the edit profile button at profile mentor page
     And User already in edit profile mentor page
-    And User input "dicoba123" as oldPassword, input "dicoba3" as newPassword and input "dicoba321" as confirmationPassword
+    And User input "dicoba321" as oldPassword, input "dicoba3" as newPassword and input "dicoba321" as confirmationPassword
     Then User click the update password button at edit profile mentor page
     And User will get the pop up message "new password and confirmation password is not equal"
     And User will stay on edit profile mentor page
@@ -290,7 +290,7 @@ Feature: Edit Profile Mentor
     Given User already on musiclab website
     When User click login menu on musiclab website
     Then User already in login page
-    And User input "buji.coba@yahoo.com" as email, input "dicoba123" as password and select "Mentor" as role
+    And User input "buji.coba@yahoo.com" as email, input "dicoba321" as password and select "Mentor" as role
     And User click the login button
     Then User will get the pop up message "login success"
     And User will direct to homepage
@@ -304,16 +304,16 @@ Feature: Edit Profile Mentor
     And User will stay on edit profile mentor page
   Examples:
     | oldpass   | newpass   | confirmpass |
-    |           | dicoba321 | dicoba321   |
-    | dicoba123 |           | dicoba321   |
-    | dicoba123 | dicoba321 |             |
+    |           | dicoba123 | dicoba123   |
+    | dicoba321 |           | dicoba123   |
+    | dicoba321 | dicoba123 |             |
 
   @EditProfileMentorTest18
   Scenario: User go to edit profile student account page and verify function of the "kembali" button
     Given User already on musiclab website
     When User click login menu on musiclab website
     Then User already in login page
-    And User input "buji.coba@yahoo.com" as email, input "dicoba123" as password and select "Mentor" as role
+    And User input "buji.coba@yahoo.com" as email, input "dicoba321" as password and select "Mentor" as role
     And User click the login button
     Then User will get the pop up message "login success"
     And User will direct to homepage
