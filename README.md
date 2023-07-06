@@ -17,9 +17,7 @@ This is WEB Automation Testing Project for [MusicLab](https://music-lab-immersiv
 - Java 8
 - Selenium
 - Cucumber
-- Rest Assured
 - Serenity BDD
-- Postman
 - Intellij IDEA
 
 # How to Run Project
@@ -39,4 +37,3 @@ go to maven, clean & test
 -  [Andersen Sebastian Gunawan](https://github.com/kasg888)
 -  [Dinda Madu Tasya](https://github.com/dindazzz)
 -  [Titi Widiati Ningsih](https://github.com/titiwidiati)
-
